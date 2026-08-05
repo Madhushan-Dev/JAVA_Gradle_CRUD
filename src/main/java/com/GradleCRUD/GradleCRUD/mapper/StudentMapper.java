@@ -8,6 +8,6 @@ import org.mapstruct.NullValuePropertyMappingStrategy;
 
 @Mapper(componentModel = "spring",nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE)
 public interface StudentMapper {
-    Student toEntity(RequestDTO dto);
+    static Student toEntity(RequestDTO dto);
     ResponseDTO toDto(Student student);
 }
